@@ -1,9 +1,12 @@
 """computerender."""
-from typing import Optional, Dict, Any
+import os
+from typing import Any
+from typing import Dict
+from typing import Optional
+
 import aiohttp
 from aiohttp import FormData
-import os
-from urllib.parse import quote_plus
+
 
 class Computerender:
     """Client for the computerender API."""
@@ -17,16 +20,12 @@ class Computerender:
 
     async def generate(self, prompt: str, **kwargs: Dict[str, Any]) -> bytes:
         """Generate an image."""
-        method = "generate/"
+        route = "/generate"
         form_data = FormData(kwargs)
-        async with aiohttp.ClientSession.request() as session:
+        async with aiohttp.ClientSession(self.base_url) as session:
             result = await session.post(
-                self.base_url + method,
+                route,
                 data=form_data,
-                headers={"Authorization": f"X-API-Key {self.api_key}"}
+                headers={"Authorization": f"X-API-Key {self.api_key}"},
             )
-            return result
-
-    def do_it(self) -> None:
-        """Test method that does nothing."""
-        print("oh baby a triple")
+            return await result.read()

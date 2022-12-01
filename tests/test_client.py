@@ -1,6 +1,11 @@
 """Test cases for the client module."""
-from computerender import Computerender
+import io
+
 import pytest
+from PIL import Image
+
+from computerender import Computerender
+
 
 def test_client_succeeds_no_key() -> None:
     """Client can be initialized with no arg."""
@@ -14,15 +19,11 @@ def test_client_succeeds_w_key() -> None:
     assert cr_client.api_key == "test"
 
 
-def test_client_succeeds_test() -> None:
-    """Client can be initialized and test method called."""
-    cr_client = Computerender()
-    cr_client.do_it()
-    assert cr_client is not None
-
 @pytest.mark.asyncio
 async def test_client_generate_basic() -> None:
-    """Client returns data on generate"""
+    """Client returns data on generate."""
     cr_client = Computerender()
-    result = await cr_client.generate("what's up gamers", iterations=20)
-    assert result is not None
+    result = await cr_client.generate("what's up gamers", iterations=20, height=256)
+    image = Image.open(io.BytesIO(result))
+    assert image.width == 512
+    assert image.height == 256
