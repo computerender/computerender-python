@@ -1,7 +1,7 @@
 # Usage
 
 ```{eval-rst}
-.. click:: computerender-python.__main__:main
+.. click:: computerender.__main__:main
     :prog: computerender
     :nested: full
 ```

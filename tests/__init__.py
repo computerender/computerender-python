@@ -1,1 +1,1 @@
-"""Test suite for the computerender-python package."""
+"""Test suite for the computerender package."""

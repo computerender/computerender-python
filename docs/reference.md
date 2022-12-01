@@ -3,6 +3,6 @@
 ## computerender-python
 
 ```{eval-rst}
-.. automodule:: computerender-python
+.. automodule:: computerender
    :members:
 ```
