@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "computerender"
-version = "0.0.0"
+version = "0.0.1"
 description = "Computerender"
 authors = ["computerender <peter@computerender.com>"]
 license = "MIT"
@@ -21,6 +21,7 @@ Changelog = "https://github.com/computerender/computerender-python/releases"
 [tool.poetry.dependencies]
 python = "^3.7"
 click = ">=8.0.1"
+aiohttp = "^3.8.3"
 
 [tool.poetry.dev-dependencies]
 Pygments = ">=2.10.0"
@@ -47,6 +48,7 @@ sphinx-click = ">=3.0.2"
 typeguard = ">=2.13.3"
 xdoctest = {extras = ["colors"], version = ">=0.15.10"}
 myst-parser = {version = ">=0.16.1"}
+pytest-asyncio = "^0.20.2"
 
 [tool.poetry.scripts]
 computerender = "computerender.__main__:main"
