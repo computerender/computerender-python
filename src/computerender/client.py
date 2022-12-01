@@ -1,7 +1,6 @@
 """computerender."""
 import os
 from typing import Any
-from typing import Dict
 from typing import Optional
 
 import aiohttp
@@ -18,14 +17,17 @@ class Computerender:
         """Initialize api client."""
         self.api_key = api_key or os.environ["CR_KEY"]
 
-    async def generate(self, prompt: str, **kwargs: Dict[str, Any]) -> bytes:
+    async def generate(self, prompt: str, **kwargs: Any) -> bytes:
         """Generate an image."""
         route = "/generate"
         form_data = FormData(kwargs)
+        form_data.add_field("prompt", prompt)
         async with aiohttp.ClientSession(self.base_url) as session:
-            result = await session.post(
+            resp = await session.post(
                 route,
                 data=form_data,
                 headers={"Authorization": f"X-API-Key {self.api_key}"},
             )
-            return await result.read()
+            if resp.status != 200:
+                print(await resp.text())
+            return await resp.read()

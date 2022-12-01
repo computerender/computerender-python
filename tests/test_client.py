@@ -23,7 +23,17 @@ def test_client_succeeds_w_key() -> None:
 async def test_client_generate_basic() -> None:
     """Client returns data on generate."""
     cr_client = Computerender()
-    result = await cr_client.generate("what's up gamers", iterations=20, height=256)
+    result = await cr_client.generate("what's up gamers")
+    image = Image.open(io.BytesIO(result))
+    assert image.width == 512
+    assert image.height == 512
+
+
+@pytest.mark.asyncio
+async def test_client_generate_kwargs() -> None:
+    """Client returns data on generate."""
+    cr_client = Computerender()
+    result = await cr_client.generate("what's up gamers", iterations=20, h=256)
     image = Image.open(io.BytesIO(result))
     assert image.width == 512
     assert image.height == 256

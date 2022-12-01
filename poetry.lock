@@ -1150,6 +1150,14 @@ doc = ["sphinx-autodoc-typehints (>=1.2.0)", "sphinx-rtd-theme"]
 test = ["mypy", "pytest", "typing-extensions"]
 
 [[package]]
+name = "types-pillow"
+version = "9.3.0.2"
+description = "Typing stubs for Pillow"
+category = "dev"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "typing-extensions"
 version = "4.4.0"
 description = "Backported and Experimental Type Hints for Python 3.7+"
@@ -1240,7 +1248,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "1dbe68558898c0c97e1de9d4dde77e907c78bffd806372d0b489dfa62574a326"
+content-hash = "0d50844b3c06c279ac1e2ef12498133e29bdc2500acc01fbbb81f64fdc13b937"
 
 [metadata.files]
 aiohttp = [
@@ -2126,6 +2134,10 @@ typed-ast = [
 typeguard = [
     {file = "typeguard-2.13.3-py3-none-any.whl", hash = "sha256:5e3e3be01e887e7eafae5af63d1f36c849aaa94e3a0112097312aabfa16284f1"},
     {file = "typeguard-2.13.3.tar.gz", hash = "sha256:00edaa8da3a133674796cf5ea87d9f4b4c367d77476e185e80251cc13dfbb8c4"},
+]
+types-pillow = [
+    {file = "types-Pillow-9.3.0.2.tar.gz", hash = "sha256:2a0323bdc0af126a7ba12d3a529a50f1d058e827cb475500f14994876ab7d863"},
+    {file = "types_Pillow-9.3.0.2-py3-none-any.whl", hash = "sha256:b2d8a21b97857b69fbfdd5d0302e9a43ba4a9bdc625f4a6bdcd404aa175d86bc"},
 ]
 typing-extensions = [
     {file = "typing_extensions-4.4.0-py3-none-any.whl", hash = "sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e"},
