@@ -1,4 +1,4 @@
-"""Computerender"""
+"""Computerender."""
 
 from .client import Computerender
 
