@@ -9,7 +9,7 @@ homepage = "https://github.com/computerender/computerender-python"
 repository = "https://github.com/computerender/computerender-python"
 documentation = "https://computerender.readthedocs.io"
 packages = [
-    { include = "computerender-python", from = "src" },
+    { include = "computerender", from = "src" },
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
