@@ -1,6 +1,6 @@
 """Computerender"""
 
-from Client import Computerender
+from .client import Computerender
 
 __all__ = [
     "Computerender"
