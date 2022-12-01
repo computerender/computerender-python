@@ -643,7 +643,7 @@ flake8 = ">=3.9.1"
 name = "pillow"
 version = "9.3.0"
 description = "Python Imaging Library (Fork)"
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.7"
 
@@ -1248,7 +1248,7 @@ testing = ["flake8 (<5)", "func-timeout", "jaraco.functools", "jaraco.itertools"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "0d50844b3c06c279ac1e2ef12498133e29bdc2500acc01fbbb81f64fdc13b937"
+content-hash = "af4349fb18d63c747baa49c51fe66e7a61a0260854d9c54d0b97c4dab5d99c60"
 
 [metadata.files]
 aiohttp = [

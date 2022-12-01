@@ -29,5 +29,5 @@ class Computerender:
                 headers={"Authorization": f"X-API-Key {self.api_key}"},
             )
             if resp.status != 200:
-                print(await resp.text())
+                raise Exception(await resp.text())
             return await resp.read()

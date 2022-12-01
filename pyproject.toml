@@ -22,7 +22,6 @@ Changelog = "https://github.com/computerender/computerender-python/releases"
 python = "^3.7"
 click = ">=8.0.1"
 aiohttp = "^3.8.3"
-pillow = "^9.3.0"
 
 [tool.poetry.dev-dependencies]
 Pygments = ">=2.10.0"
@@ -50,6 +49,7 @@ typeguard = ">=2.13.3"
 xdoctest = {extras = ["colors"], version = ">=0.15.10"}
 myst-parser = {version = ">=0.16.1"}
 pytest-asyncio = "^0.20.2"
+pillow = "^9.3.0"
 types-pillow = "^9.3.0.2"
 
 [tool.poetry.scripts]
