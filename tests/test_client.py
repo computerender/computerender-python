@@ -1,4 +1,3 @@
-
 from computerender import Computerender
 
 
@@ -12,6 +11,7 @@ def test_client_succeeds_w_key() -> None:
     """Client can be initialized with key arg"""
     cr_client = Computerender("test")
     assert cr_client is not None
+
 
 def test_client_succeeds_test() -> None:
     """Client can be initialized with key arg"""

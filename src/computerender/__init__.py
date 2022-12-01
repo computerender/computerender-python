@@ -2,6 +2,5 @@
 
 from .client import Computerender
 
-__all__ = [
-    "Computerender"
-]
+
+__all__ = ["Computerender"]
