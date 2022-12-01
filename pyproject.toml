@@ -49,7 +49,7 @@ xdoctest = {extras = ["colors"], version = ">=0.15.10"}
 myst-parser = {version = ">=0.16.1"}
 
 [tool.poetry.scripts]
-computerender = "computerender-python.__main__:main"
+computerender = "computerender.__main__:main"
 
 [tool.coverage.paths]
 source = ["src", "*/site-packages"]
@@ -57,7 +57,7 @@ tests = ["tests", "*/tests"]
 
 [tool.coverage.run]
 branch = true
-source = ["computerender-python", "tests"]
+source = ["computerender", "tests"]
 
 [tool.coverage.report]
 show_missing = true
