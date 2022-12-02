@@ -1,5 +1,6 @@
 """Test cases for the client module."""
 import io
+
 import pytest
 from PIL import Image
 
@@ -27,12 +28,14 @@ async def test_client_generate_basic() -> None:
     assert image.width == 512
     assert image.height == 512
 
+
 @pytest.mark.asyncio
 async def test_client_generate_error() -> None:
     """Client throws error on bad request."""
     with pytest.raises(Exception):
         cr_client = Computerender()
-        result = await cr_client.generate("what's up gamers", w=9000)
+        await cr_client.generate("what's up gamers", w=9000)
+
 
 @pytest.mark.asyncio
 async def test_client_generate_kwargs() -> None:
