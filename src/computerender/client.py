@@ -20,8 +20,10 @@ class Computerender:
     async def generate(self, prompt: str, **kwargs: Any) -> bytes:
         """Generate an image."""
         route = "/generate"
-        form_data = FormData(kwargs)
-        form_data.add_field("prompt", prompt)
+        form_data = FormData()
+        form_data.add_field("prompt", str(prompt))
+        for key, val in kwargs.items():
+            form_data.add_field(key, val if type(val) == bytes else str(val))
         async with aiohttp.ClientSession(self.base_url) as session:
             resp = await session.post(
                 route,

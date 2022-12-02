@@ -45,3 +45,17 @@ async def test_client_generate_kwargs() -> None:
     image = Image.open(io.BytesIO(result))
     assert image.width == 512
     assert image.height == 256
+
+
+@pytest.mark.asyncio
+async def test_client_generate_img2img() -> None:
+    """Client does img2img."""
+    cr_client = Computerender()
+    input_img = Image.new(mode="RGB", size=(384, 384))
+    img_buf = io.BytesIO()
+    input_img.save(img_buf, format="JPEG")
+    img_bytes = img_buf.getvalue()
+    result = await cr_client.generate("what's up gamers", iterations=20, img=img_bytes)
+    image = Image.open(io.BytesIO(result))
+    assert image.width == 384
+    assert image.height == 384
