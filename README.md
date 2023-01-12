@@ -41,7 +41,7 @@ img_bytes = asyncio.run(cr.generate("testing", w=1024, h=384, iterations=20))
 with open("cow.jpg", "rb") as in_f:
     img_bytes = asyncio.run(
         cr.generate(
-            "van gough painting of a cow wearing sunglasses",
+            "van gogh painting of a cow wearing sunglasses",
             img=in_f.read()
         )
     )
@@ -62,12 +62,11 @@ result_bytes = asyncio.run(
 
 "a cow wearing sunglasses"  
 <img src="https://i.imgur.com/nhEQtQo.jpg" 
-alt="a cow wearing sunglasses" width="256"/>  
-  
-    
-"van gough painting of a cow wearing sunglasses"  
+alt="a cow wearing sunglasses" width="256"/>
+
+"van gogh painting of a cow wearing sunglasses"  
 <img src="https://i.imgur.com/0qV4YB2.jpg" 
-alt="van gough painting of a cow wearing sunglasses" width="256"/>
+alt="van gogh painting of a cow wearing sunglasses" width="256"/>
 
 ## License
 
