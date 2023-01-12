@@ -31,7 +31,7 @@ cr = Computerender()
 
 # Generate image and save to file
 with open("cow.jpg", "wb") as f:
-    img_bytes = asyncio.run(cr.generate("cool cow party"))
+    img_bytes = asyncio.run(cr.generate("a cow wearing sunglasses"))
     f.write(img_bytes)
 
 # Generate image with custom parameters
@@ -41,11 +41,11 @@ img_bytes = asyncio.run(cr.generate("testing", w=1024, h=384, iterations=20))
 with open("cow.jpg", "rb") as in_f:
     img_bytes = asyncio.run(
         cr.generate(
-            "anime cow party",
+            "van gough painting of a cow wearing sunglasses",
             img=in_f.read()
         )
     )
-with open("anime_cow.jpg", "wb") as out_f:
+with open("van_gogh_cow.jpg", "wb") as out_f:
     out_f.write(img_bytes)
 
 # img2img one-liner reading and writing to file
@@ -59,6 +59,15 @@ result_bytes = asyncio.run(
     cr.generate("testing style transfer", img=img_bytes)
 )
 ```
+
+"a cow wearing sunglasses"  
+<img src="https://i.imgur.com/nhEQtQo.jpg" 
+alt="a cow wearing sunglasses" width="256"/>  
+  
+    
+"van gough painting of a cow wearing sunglasses"  
+<img src="https://i.imgur.com/0qV4YB2.jpg" 
+alt="van gough painting of a cow wearing sunglasses" width="256"/>
 
 ## License
 
