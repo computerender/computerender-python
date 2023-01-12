@@ -17,6 +17,7 @@
 Python client for using the computerender API.
 
 ## Updates
+
 - v0.1: Improved Error handling
 - v0.0: Img2img!
 
@@ -66,12 +67,12 @@ result_bytes = asyncio.run(
 )
 ```
 
-"a cow wearing sunglasses"  
-<img src="https://i.imgur.com/nhEQtQo.jpg" 
+"a cow wearing sunglasses"
+<img src="https://i.imgur.com/nhEQtQo.jpg"
 alt="a cow wearing sunglasses" width="256"/>
 
-"van gogh painting of a cow wearing sunglasses"  
-<img src="https://i.imgur.com/0qV4YB2.jpg" 
+"van gogh painting of a cow wearing sunglasses"
+<img src="https://i.imgur.com/0qV4YB2.jpg"
 alt="van gogh painting of a cow wearing sunglasses" width="256"/>
 
 ## License
