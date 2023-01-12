@@ -14,6 +14,12 @@
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [black]: https://github.com/psf/black
 
+Python client for using the computerender API.
+
+## Updates
+- v0.1: Improved Error handling
+- v0.0: Img2img!
+
 ## Installation
 
 ```console
