@@ -68,12 +68,13 @@ result_bytes = asyncio.run(
 ```
 
 "a cow wearing sunglasses"
-<img src="https://i.imgur.com/nhEQtQo.jpg"
-alt="a cow wearing sunglasses" width="256"/>
 
-"van gogh painting of a cow wearing sunglasses"
-<img src="https://i.imgur.com/0qV4YB2.jpg"
-alt="van gogh painting of a cow wearing sunglasses" width="256"/>
+  
+<img src="https://i.imgur.com/nhEQtQo.jpg" alt="a cow wearing sunglasses" width="256"/>
+
+"van gogh painting of a cow wearing sunglasses" 
+  
+<img src="https://i.imgur.com/0qV4YB2.jpg" alt="van gogh painting of a cow wearing sunglasses" width="256"/>
 
 ## License
 
